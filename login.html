@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do WebApp</title>
+    <style>
+        .header-left a {
+            color: #111;
+            text-decoration: none;
+        }
+        .header-right a {
+            color: #111;
+            text-decoration: none;
+        }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: #417e6a;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header.Header {
+            width: 100%;
+            background: rgba(255,255,255,0.25);
+            padding: 1.5rem 0 1rem 0;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 0 0 18px 18px;
+            border: 1px solid rgba(255,255,255,0.18);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-left a {
+            color: #111;
+            text-decoration: none;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header-right a {
+            color: #111;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .header-left {
+            margin-left: 2rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .header-right {
+            margin-right: 2rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #111;
+            text-decoration: none;
+        }
+        .cent {
+            background: rgb(174, 204, 140);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 15px 10px rgba(16, 22, 50, 0.1);
+            min-width: 300px;
+        }
+        .cent:hover{
+            box-shadow: 0 25px 20px rgba(19, 27, 65, 0.2);
+            transform: translateY(-5px);
+        }
+        .login-form {
+            padding: 0px;
+            justify-content: center;
+        }
+        .inner-cent{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        #RememberMe {
+            font-size: small;
+            justify-content: end;
+        }
+    </style>
+</head>
+<body>
+    <header class="Header">
+    <div class="header-left" style="font-size: 26px;"><a href="./login.html">To-Do WebApp</a></div>
+    <div class="header-right" style="font-size: 22px;"><a href="#">About</a></div>
+    </header>
+    <div class="main-center" style="margin-top: 40px;">
+        <div class="cent">
+            <h1 style="font-size: 32px; text-align: center;">Welcome!</h1>
+            <p style="font-size: 19px; text-align: left;">Please log in to continue.</p>
+            <div class="inner-cent">
+                <form class="login-form">
+                    <label for="Username" id="Username">
+                        <b>Username:</b>
+                        <input type="text" name="username">
+                    </label>
+                    <br></br>
+                    <label for="Password" id="Password">
+                        <b>Password:</b>
+                        <input type="password" name="password">
+                    </label>
+                    <br></br>
+                    <label for="RememberMe" id="RememberMe">
+                        <input type="checkbox" name="rememberme">
+                        Remember Me
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+</html>
