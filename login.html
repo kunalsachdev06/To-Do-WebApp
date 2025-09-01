@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do WebApp</title>
     <style>
+        .header-logo {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
         .header-left a {
             color: #111;
             text-decoration: none;
@@ -104,7 +111,10 @@
 </head>
 <body>
     <header class="Header">
-    <div class="header-left" style="font-size: 26px;"><a href="./login.html">To-Do WebApp</a></div>
+    <div class="header-left" style="font-size: 26px; display: flex; align-items: center;">
+        <img src="logo.png" alt="Logo" class="header-logo" />
+        <a href="./login.html">To-Do WebApp</a>
+    </div>
     <div class="header-right" style="font-size: 22px;"><a href="#">About</a></div>
     </header>
     <div class="main-center" style="margin-top: 40px;">
