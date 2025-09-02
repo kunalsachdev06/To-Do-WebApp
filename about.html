@@ -20,19 +20,6 @@
             color: #111;
             text-decoration: none;
         }
-        body {
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(to right bottom, #c5ecec 20%, #a0dbe8 79%);
-            display: flex;
-            flex-direction: column;
-        }
-        .main-center {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         header.Header {
             width: 100%;
             background: rgba(255,255,255,0.25);
@@ -80,32 +67,18 @@
             color: #111;
             text-decoration: none;
         }
-        .cent {
-            background: rgb(128, 218, 218);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 15px 10px rgba(16, 22, 50, 0.1);
-            min-width: 300px;
-        }
-        .cent:hover{
-            box-shadow: 0 25px 20px rgba(19, 27, 65, 0.2);
-            transform: translateY(-5px);
-        }
-        .login-form {
-            padding: 0px;
-            justify-content: center;
-        }
-        .inner-cent{
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right bottom, #c5ecec 20%, #a0dbe8 79%);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            font-size: 20px;
         }
-        #RememberMe {
-            font-size: small;
-            justify-content: end;
+        .title {
+            font-size: 34px;
+            color: rgb(61, 7, 7);
+            text-decoration: underline double 3px ;
+            text-align: center;
         }
     </style>
 </head>
@@ -117,28 +90,16 @@
     </div>
     <div class="header-right" style="font-size: 22px;"><a href="./about.html">About</a></div>
     </header>
-    <div class="main-center" style="margin-top: 40px;">
-        <div class="cent">
-            <h1 style="font-size: 32px; text-align: center;">Welcome!</h1>
-            <p style="font-size: 19px; text-align: left;">Please log in to continue.</p>
-            <div class="inner-cent">
-                <form class="login-form">
-                    <label for="Username" id="Username">
-                        <b>Username:</b>
-                        <input type="text" name="username">
-                    </label>
-                    <br></br>
-                    <label for="Password" id="Password">
-                        <b>Password:</b>
-                        <input type="password" name="password">
-                    </label>
-                    <br></br>
-                    <label for="RememberMe" id="RememberMe">
-                        <input type="checkbox" name="rememberme">
-                        Remember Me
-                    </label>
-                </form>
-            </div>
-        </div>
+    <h1 class="title">About</h1>
+    <div>
+        <p>Presenting a simple and user-friendly To-Do WebApp to manage your tasks efficiently.</p>
+        <p>Features include:</p>
+        <ul>
+            <li>Task creation and deletion</li>
+            <li>Task prioritization</li>
+            <li>Due date reminders</li>
+            <li>Tasks stored locally</li>
+        </ul>
     </div>
+</body>
 </html>
