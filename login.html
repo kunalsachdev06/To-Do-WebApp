@@ -107,6 +107,33 @@
             font-size: small;
             justify-content: end;
         }
+        .login-button {
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            width: 250px;
+            padding: 0px;
+            font-size: 18px;
+            border-radius: 6px;
+            border-color: rgb(10, 10, 10);
+            border-width: 1.5px;
+        }
+        .login-button:hover{
+            background: rgb(22, 137, 157);
+            color: rgb(255, 255, 255);
+            transform: translateY(5px);
+            box-shadow: 0 25px 20px rgba(70, 90, 187, 0.2);
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.16s ease;
+        }
+        .login-button a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .login-button a:hover {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -137,6 +164,8 @@
                         <input type="checkbox" name="rememberme">
                         Remember Me
                     </label>
+                    <br></br>
+                    <button class="login-button"><a href="./main.html">Log In</a></button>
                 </form>
             </div>
         </div>
