@@ -1,17 +1,43 @@
 var allTasks = [];
 var filter = 'all';
 var nextId = 1;
+
 window.onload = function() {
+    checkUserLogin();
+    
     loadTasksFromStorage();
     displayTasks();
     updateTaskCounter();
+    
     var inputBox = document.getElementById('taskInput');
-    inputBox.onkeypress = function(event) {
-        if (event.key === 'Enter') {
-            addNewTask();
+    if (inputBox) {
+        inputBox.onkeypress = function(event) {
+            if (event.key === 'Enter') {
+                addNewTask();
+            }
         }
     }
 };
+
+// Check if user is logged in and show welcome message
+function checkUserLogin() {
+    var currentUser = localStorage.getItem('currentUser');
+    var welcomeElement = document.getElementById('welcomeMessage');
+    
+    if (currentUser && welcomeElement) {
+        welcomeElement.textContent = 'Welcome back, ' + currentUser + '!';
+    }
+}
+
+// Logout function
+function logout() {
+    var confirmLogout = confirm('Are you sure you want to logout?');
+    if (confirmLogout) {
+        localStorage.removeItem('currentUser');
+        alert('You have been logged out successfully!');
+        window.location.href = './login.html';
+    }
+}
 
 function addNewTask() {
     var inputBox = document.getElementById('taskInput');

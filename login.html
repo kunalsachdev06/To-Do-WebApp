@@ -131,6 +131,24 @@
             text-decoration: none;
             color: inherit;
         }
+        .clear-button {
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            width: 250px;
+            padding: 0px;
+            font-size: 16px;
+            border-radius: 6px;
+            border-color: rgb(100, 100, 100);
+            border-width: 1.5px;
+            background: rgb(240, 240, 240);
+            cursor: pointer;
+        }
+        .clear-button:hover {
+            background: rgb(200, 200, 200);
+            transform: translateY(2px);
+            transition: all 0.16s ease;
+        }
         .login-button a:hover {
             text-decoration: none;
         }
@@ -152,12 +170,12 @@
                 <form class="login-form">
                     <label for="Username" id="Username">
                         <b>Username:</b>
-                        <input type="text" name="username">
+                        <input type="text" name="username" id="usernameField" required>
                     </label>
                     <br></br>
                     <label for="Password" id="Password">
                         <b>Password:</b>
-                        <input type="password" name="password">
+                        <input type="password" name="password" id="passwordField" required>
                     </label>
                     <br></br>
                     <label for="RememberMe" id="RememberMe">
@@ -165,9 +183,12 @@
                         Remember Me
                     </label>
                     <br></br>
-                    <button class="login-button"><a href="./main.html">Log In</a></button>
+                    <button type="button" class="login-button" onclick="checkLogin()">Log In</button>
+                    <br><br>
+                    <button type="button" class="clear-button" onclick="clearForm()">Clear Form</button>
                 </form>
             </div>
         </div>
     </div>
+    <script src="login.js"></script>
 </html>
