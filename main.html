@@ -292,13 +292,13 @@
             <div class="input-section">
                 <div class="input-group">
                     <input type="text" id="taskInput" placeholder="What needs to be done?" maxlength="200">
-                    <button class="btn add-btn" onclick="addTask()">Add Task</button>
+                    <button class="btn add-btn" onclick="addNewTask()">Add Task</button>
                 </div>
                 
                 <div class="filter-buttons">
-                    <button class="filter-btn active" onclick="filterTasks('all')" id="allBtn">All</button>
-                    <button class="filter-btn" onclick="filterTasks('active')" id="activeBtn">Active</button>
-                    <button class="filter-btn" onclick="filterTasks('completed')" id="completedBtn">Completed</button>
+                    <button class="filter-btn active" onclick="changeFilter('all')" id="allBtn">All</button>
+                    <button class="filter-btn" onclick="changeFilter('active')" id="activeBtn">Active</button>
+                    <button class="filter-btn" onclick="changeFilter('completed')" id="completedBtn">Completed</button>
                 </div>
             </div>
 
@@ -308,7 +308,7 @@
 
             <div class="task-stats">
                 <div class="task-count" id="taskCount">0 tasks left</div>
-                <button class="clear-btn" onclick="clearCompleted()" id="clearBtn" disabled>Clear Completed</button>
+                <button class="clear-btn" onclick="clearAllCompleted()" id="clearBtn" disabled>Clear Completed</button>
             </div>
         </div>
     </div>
