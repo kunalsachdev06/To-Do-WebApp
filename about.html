@@ -80,6 +80,27 @@
             text-decoration: underline double 3px ;
             text-align: center;
         }
+        .content{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid #e5eabd;
+            border-width: 2px;
+            padding: 2rem;
+            background: rgba(132, 232, 250, 0.9);
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .content:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+            background: rgba(108, 225, 246, 0.9);
+        }
     </style>
 </head>
 <body>
@@ -91,9 +112,9 @@
     <div class="header-right" style="font-size: 22px;"><a href="./main.html">About</a></div>
     </header>
     <h1 class="title">About</h1>
-    <div>
-        <p>Presenting a simple and user-friendly To-Do WebApp to manage your tasks efficiently.</p>
-        <p>Features include:</p>
+    <div class="content">
+        <p style="font-size: 18px;"><b>Presenting a simple and user-friendly To-Do WebApp to manage your tasks efficiently.</b> </p>
+        <p style="font-size: 18px;"><b>Features include:</b></p>
         <ul>
             <li>Task creation and deletion</li>
             <li>Task prioritization</li>
